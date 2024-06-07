@@ -1,0 +1,9 @@
+.valueContainer, .btnContainer{
+    padding: 10px;
+
+    font-weight: 500;
+}
+
+.iconPerson, .iconPhone{
+    margin-right: 5px;
+}
