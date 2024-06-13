@@ -7,3 +7,14 @@
 .iconPerson, .iconPhone{
     margin-right: 5px;
 }
+
+.contact {
+    width: 250px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}

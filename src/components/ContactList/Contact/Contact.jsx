@@ -4,7 +4,7 @@ import { FaPhone } from "react-icons/fa6";
 
 const Contact = ({data, onDelete}) => {
   return (
-    <>
+    <li className={css.contact}>
     <div className={css.valueContainer}>
       <p><FaPhone className={ css.iconPhone }/>{data.name}</p>
         <p><IoPerson className={ css.iconPerson } />{data.number}</p>
@@ -12,7 +12,7 @@ const Contact = ({data, onDelete}) => {
     <div className={css.btnContainer}>
       <button onClick={() => onDelete(data.id)}>Delete</button>
     </div>
-    </>
+    </li>
   );
 };
 

@@ -5,13 +5,11 @@ const ContactList = ({ contacts, onDelete }) => {
   return (
     <ul className={css.container}>
       {contacts.map(contact => (
-        <li className={css.contact} key={contact.id}>
-          <Contact data={contact} onDelete={onDelete} />
-          </li>
+          <Contact key={contact.id} data={contact} onDelete={() => onDelete(contact.id)} />
       ))
       }
     </ul>
   );
 };
 
-export default ContactList
+export default ContactList;

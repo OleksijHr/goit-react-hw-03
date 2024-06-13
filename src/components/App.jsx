@@ -16,11 +16,11 @@ function App() {
     ];
   });
 
+  const [filter, setFilter] = useState('');
+
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
-
-  const [filter, setFilter] = useState('');
 
   const addContact = (newContact) => {
     setContacts((prevContact) => {
@@ -34,9 +34,12 @@ function App() {
     });
   };
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLocaleLowerCase())
-  );
+  // const filteredContacts = contacts.filter(contact =>
+  //   contact.name.toLowerCase().includes(filter.toLowerCase())
+  // );
+  const filteredContacts = contacts.filter(contact => 
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  )
 
   return (
     <>
