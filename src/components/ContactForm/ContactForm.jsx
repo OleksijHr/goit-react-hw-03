@@ -20,7 +20,7 @@ const ContactForm = ({ onAddContact }) => {
   });
 
   const onSubmit = (values, { resetForm }) => {
-    onAddContact(values.name, values.number);
+    onAddContact(values);
     resetForm();
   };
 
